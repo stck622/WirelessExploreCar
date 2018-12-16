@@ -15,27 +15,36 @@ public class sensor extends JPanel{
 
 
         /* 좌측 페널 */
-        setter(-10,0,150,200);
         JPanel left = new JPanel();
         left.setBackground(new Color(0, 3, 41));
         left.setBackground(Color.white);
-        left.setBorder(BorderFactory.createEmptyBorder(0, 0, 0, 0));
-
-        JLabel jLabel = new JLabel("asd");
-        Add_img temp1 = new Add_img("C:\\Users\\stck6\\Desktop\\64i58PICYxE_1024.png");
-        temp1.setBackground(Color.red);
-        temp1.setLayout(new BorderLayout());
-        jLabel.setBorder(BorderFactory.createEmptyBorder(0, 0, 100, 0));
-        temp1.add(jLabel,BorderLayout.SOUTH);
-        left.add(temp1);
-        Add_img temp2 = new Add_img("C:\\Users\\stck6\\Desktop\\64i58PICYxE_1024.png");
-        temp2.setBackground(Color.blue);
-        left.add(temp2);
         left.setLayout(new GridLayout(1,2));
-        temp1.setBorder(BorderFactory.createEmptyBorder(0, 0, 0, 125));
-        temp2.setBorder(BorderFactory.createEmptyBorder(0, 0, 0, 125));
 
+        /* 온도 센서 패널 */
+        setter(-10,0,150,200);
+        Add_img temp_panel = new Add_img("C:\\Users\\stck6\\Desktop\\64i58PICYxE_1024.png");
+        temp_panel.setBackground(Color.red);
+        temp_panel.setBorder(BorderFactory.createEmptyBorder(0, 0, 0, 125));
+        temp_panel.setLayout(new BorderLayout());
+        left.add(temp_panel);
 
+        /* 온도 센서 라벨 */
+        JLabel temp_label = new JLabel("asd");
+        temp_label.setBorder(BorderFactory.createEmptyBorder(0, 0, 100, 0));
+        temp_panel.add(temp_label,BorderLayout.SOUTH);
+
+        /* 습도 센서 패널 */
+        setter(-10,0,150,200);
+        Add_img humi_panel = new Add_img("C:\\Users\\stck6\\Desktop\\64i58PICYxE_1024.png");
+        humi_panel.setBackground(Color.blue);
+        humi_panel.setBorder(BorderFactory.createEmptyBorder(0, 0, 0, 125));
+        humi_panel.setLayout(new BorderLayout());
+        left.add(humi_panel);
+
+        /* 습도 센서 라벨 */
+        JLabel humi_label = new JLabel("asd");
+        humi_label.setBorder(BorderFactory.createEmptyBorder(0, 0, 100, 0));
+        humi_panel.add(humi_label,BorderLayout.SOUTH);
 
         /* 우측 페널 */
         JPanel right = new JPanel();
